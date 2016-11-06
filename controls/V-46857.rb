@@ -19,15 +19,14 @@ control 'V-46857' do
   tag checktext: 'The policy value for Computer Configuration -> Administrative Templates -> Windows Components -> Internet Explorer -> Security Features-> Notification Bar-> Internet Explorer Processes must be Enabled. Procedure: Use the Windows Registry Editor to navigate to the following key: HKLM\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND Criteria: If the value "(Reserved)" is REG_SZ = 1, this is not a finding.'
 
 # START_DESCRIBE V-46857
-  
+
       describe registry_key({
         hive: 'HKLM',
         key:  'Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_SECURITYBAND',
       }) do
-        its('(Reserved)') { should eq 1 }
+        its('(Reserved)') { should eq '1' }
       end
 
 # STOP_DESCRIBE V-46857
 
 end
-

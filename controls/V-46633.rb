@@ -19,15 +19,14 @@ control 'V-46633' do
   tag checktext: 'The policy value for Computer Configuration -> Administrative Templates -> Windows Components -> Internet Explorer -> Internet Control Panel -> Advanced Page -> Check for signatures on downloaded programs must be Enabled. Procedure: Use the Windows Registry Editor to navigate to the following key: HKLM\Software\Policies\Microsoft\Internet Explorer\Download Criteria: If the value "CheckExeSignatures" is REG_SZ = yes, this is not a finding.'
 
 # START_DESCRIBE V-46633
-  
+
       describe registry_key({
         hive: 'HKLM',
         key:  'Software\Policies\Microsoft\Internet Explorer\Download',
       }) do
-        its('CheckExeSignatures') { should eq yes }
+        its('CheckExeSignatures') { should eq 'yes' }
       end
 
 # STOP_DESCRIBE V-46633
 
 end
-

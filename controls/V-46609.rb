@@ -19,10 +19,17 @@ control 'V-46609' do
   tag checktext: 'The policy value for Computer Configuration -> Administrative Templates -> Windows Components -> Internet Explorer -> Delete Browsing History -> Disable Configuring History must be Enabled, and 40 entered in Days to keep pages in History. Procedure: Use the Windows Registry Editor to navigate to the following key: HKLM\Software\Policies\Microsoft\Internet Explorer\Control Panel Criteria: If the value "History" is REG_DWORD = 1, this is not a finding. AND  Procedure: Use the Windows Registry Editor to navigate to the following key: HKLM\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Url History Criteria: If the value "DaysToKeep" is REG_DWORD = 40 (decimal), this is not a finding.'
 
 # START_DESCRIBE V-46609
-  
+
       describe registry_key({
         hive: 'HKLM',
-        key:  'Software\Policies\Microsoft\Internet Explorer\Control Panel Criteria: If the value "History" is REG_DWORD = 1, this is not a finding. AND  Procedure: Use the Windows Registry Editor to navigate to the following key: HKLM\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Url History',
+        key:  'Software\Policies\Microsoft\Internet Explorer\Control Panel',
+      }) do
+        it ('History') { should eq 1 }
+      end
+
+      describe registry_key({
+        hive: 'HKLM',
+        key: 'Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Url History',
       }) do
         its('DaysToKeep') { should eq 40 }
       end
@@ -30,4 +37,3 @@ control 'V-46609' do
 # STOP_DESCRIBE V-46609
 
 end
-
