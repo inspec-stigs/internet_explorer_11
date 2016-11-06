@@ -24,7 +24,7 @@ control 'V-46841' do
         hive: 'HKLM',
         key:  'Software\Policies\Microsoft\Internet Explorer\Privacy',
       }) do
-        its("CleanHistory") { should eq 0 }
+        its('CleanHistory') { should eq 0 }
       end
 
 # STOP_DESCRIBE V-46841

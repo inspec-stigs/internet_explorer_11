@@ -24,7 +24,7 @@ control 'V-46635' do
         hive: 'HKLM',
         key:  'Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap',
       }) do
-        its("UNCAsIntranet") { should eq 0 }
+        its('UNCAsIntranet') { should eq 0 }
       end
 
 # STOP_DESCRIBE V-46635

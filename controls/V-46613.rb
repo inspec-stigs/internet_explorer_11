@@ -24,7 +24,7 @@ control 'V-46613' do
         hive: 'HKLM',
         key:  'Software\Policies\Microsoft\Internet Explorer\SQM',
       }) do
-        its("DisableCustomerImprovementProgram") { should eq 0 }
+        its('DisableCustomerImprovementProgram') { should eq 0 }
       end
 
 # STOP_DESCRIBE V-46613

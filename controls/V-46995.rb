@@ -22,9 +22,9 @@ control 'V-46995' do
   
       describe registry_key({
         hive: 'HKLM',
-        key:  'Software\Policies\Microsoft\Internet Explorer\Main ',
+        key:  'Software\Policies\Microsoft\Internet Explorer\Main',
       }) do
-        its("Isolation64Bit") { should eq 1 }
+        its('Isolation64Bit') { should eq 1 }
       end
 
 # STOP_DESCRIBE V-46995

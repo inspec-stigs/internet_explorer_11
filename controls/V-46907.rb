@@ -24,7 +24,7 @@ control 'V-46907' do
         hive: 'HKLM',
         key:  'Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3',
       }) do
-        its("2004") { should eq 3 }
+        its('2004') { should eq 3 }
       end
 
 # STOP_DESCRIBE V-46907

@@ -24,7 +24,7 @@ control 'V-46847' do
         hive: 'HKLM',
         key:  'Software\Policies\Microsoft\Internet Explorer\Privacy',
       }) do
-        its("EnableInPrivateBrowsing") { should eq 0 }
+        its('EnableInPrivateBrowsing') { should eq 0 }
       end
 
 # STOP_DESCRIBE V-46847

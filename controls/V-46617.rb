@@ -24,7 +24,7 @@ control 'V-46617' do
         hive: 'HKLM',
         key:  'Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings',
       }) do
-        its("Security_options_edit") { should eq 1 }
+        its('Security_options_edit') { should eq 1 }
       end
 
 # STOP_DESCRIBE V-46617

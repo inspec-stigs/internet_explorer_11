@@ -24,7 +24,7 @@ control 'V-46523' do
         hive: 'HKLM',
         key:  'Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3',
       }) do
-        its("1A00") { should eq 65536 }
+        its('1A00') { should eq 65536 }
       end
 
 # STOP_DESCRIBE V-46523

@@ -24,7 +24,7 @@ control 'V-46629' do
         hive: 'HKLM',
         key:  'Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings',
       }) do
-        its("CertificateRevocation") { should eq 1 }
+        its('CertificateRevocation') { should eq 1 }
       end
 
 # STOP_DESCRIBE V-46629

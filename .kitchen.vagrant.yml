@@ -1,0 +1,12 @@
+---
+driver:
+  name: vagrant
+  customize:
+    memory: 8192
+    cpuexecutioncap: 50
+
+platforms:
+  - name: mwrock/Windows2012R2
+    transport:
+      name: winrm
+

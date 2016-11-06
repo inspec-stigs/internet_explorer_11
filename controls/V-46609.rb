@@ -24,7 +24,7 @@ control 'V-46609' do
         hive: 'HKLM',
         key:  'Software\Policies\Microsoft\Internet Explorer\Control Panel Criteria: If the value "History" is REG_DWORD = 1, this is not a finding. AND  Procedure: Use the Windows Registry Editor to navigate to the following key: HKLM\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Url History',
       }) do
-        its("DaysToKeep") { should eq 40 }
+        its('DaysToKeep') { should eq 40 }
       end
 
 # STOP_DESCRIBE V-46609

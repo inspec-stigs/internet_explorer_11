@@ -24,7 +24,7 @@ control 'V-46987' do
         hive: 'HKLM',
         key:  'Software\Policies\Microsoft\Internet Explorer\Main',
       }) do
-        its("Isolation") { should eq 'PMEM' }
+        its('Isolation') { should eq 'PMEM' }
       end
 
 # STOP_DESCRIBE V-46987

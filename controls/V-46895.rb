@@ -24,7 +24,7 @@ control 'V-46895' do
         hive: 'HKLM',
         key:  'Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\4',
       }) do
-        its("1409") { should eq 0 }
+        its('1409') { should eq 0 }
       end
 
 # STOP_DESCRIBE V-46895

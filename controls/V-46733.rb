@@ -24,7 +24,7 @@ control 'V-46733' do
         hive: 'HKLM',
         key:  'Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_FILEDOWNLOAD',
       }) do
-        its("(Reserved)") { should eq 1 }
+        its('(Reserved)') { should eq 1 }
       end
 
 # STOP_DESCRIBE V-46733

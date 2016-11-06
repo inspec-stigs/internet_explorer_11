@@ -27,9 +27,9 @@ Criteria: If the value "2301" is REG_DWORD = 0, this is not a finding.
   
       describe registry_key({
         hive: 'HKLM',
-        key:  'Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3. ',
+        key:  'Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3',
       }) do
-        its("2301") { should eq 0 }
+        its('2301') { should eq 0 }
       end
 
 # STOP_DESCRIBE V-64719

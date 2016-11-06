@@ -24,7 +24,7 @@ control 'V-46647' do
         hive: 'HKLM',
         key:  'Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Lockdown_Zones\0',
       }) do
-        its("1C00") { should eq 0 }
+        its('1C00') { should eq 0 }
       end
 
 # STOP_DESCRIBE V-46647

@@ -24,7 +24,7 @@ control 'V-46615' do
         hive: 'HKLM',
         key:  'Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings',
       }) do
-        its("Security_zones_map_edit") { should eq 1 }
+        its('Security_zones_map_edit') { should eq 1 }
       end
 
 # STOP_DESCRIBE V-46615

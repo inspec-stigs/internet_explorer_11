@@ -24,7 +24,7 @@ control 'V-46633' do
         hive: 'HKLM',
         key:  'Software\Policies\Microsoft\Internet Explorer\Download',
       }) do
-        its("CheckExeSignatures") { should eq yes }
+        its('CheckExeSignatures') { should eq yes }
       end
 
 # STOP_DESCRIBE V-46633

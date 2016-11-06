@@ -27,9 +27,9 @@ Criteria: If the value "PreventIgnoreCertErrors" is REG_DWORD = 1, this is not a
   
       describe registry_key({
         hive: 'HKLM',
-        key:  'Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings. ',
+        key:  'Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings',
       }) do
-        its("PreventIgnoreCertErrors") { should eq 1 }
+        its('PreventIgnoreCertErrors') { should eq 1 }
       end
 
 # STOP_DESCRIBE V-64717

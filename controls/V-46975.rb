@@ -24,7 +24,7 @@ control 'V-46975' do
         hive: 'HKLM',
         key:  'Software\Policies\Microsoft\Internet Explorer\Main',
       }) do
-        its("DisableEPMCompat") { should eq 1 }
+        its('DisableEPMCompat') { should eq 1 }
       end
 
 # STOP_DESCRIBE V-46975

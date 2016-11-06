@@ -26,7 +26,7 @@ The policy value for Computer Configuration -> Administrative Templates -> Windo
         hive: 'HKLM',
         key:  'Software\Policies\Microsoft\Internet Explorer\Download',
       }) do
-        its("RunInvalidSignatures") { should eq 0 }
+        its('RunInvalidSignatures') { should eq 0 }
       end
 
 # STOP_DESCRIBE V-46625

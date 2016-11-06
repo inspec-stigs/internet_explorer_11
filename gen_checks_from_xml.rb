@@ -26,9 +26,9 @@ def inspec_check(text:, parse_reg:true, id:nil)
 
       describe registry_key({
         hive: '#{hive}',
-        key:  '#{key}',
+        key:  '#{key.strip.chomp('.')}',
       }) do
-        its("#{name}") { should eq #{value} }
+        its('#{name}') { should eq #{value} }
       end
       REGISTRY_DOC
     rescue NoMethodError

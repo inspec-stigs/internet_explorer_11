@@ -24,7 +24,7 @@ control 'V-46709' do
         hive: 'HKLM',
         key:  'Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_HANDLING',
       }) do
-        its("(Reserved)") { should eq 1 }
+        its('(Reserved)') { should eq 1 }
       end
 
 # STOP_DESCRIBE V-46709

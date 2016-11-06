@@ -27,9 +27,9 @@ Criteria: If the value "PreventOverrideAppRepUnknown" is REG_DWORD = 1, this is 
   
       describe registry_key({
         hive: 'HKLM',
-        key:  'Software\Policies\Microsoft\Internet Explorer\PhishingFilter.',
+        key:  'Software\Policies\Microsoft\Internet Explorer\PhishingFilter',
       }) do
-        its("PreventOverrideAppRepUnknown") { should eq 1 }
+        its('PreventOverrideAppRepUnknown') { should eq 1 }
       end
 
 # STOP_DESCRIBE V-64713

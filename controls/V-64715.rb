@@ -27,9 +27,9 @@ Criteria: If the value "BlockNonAdminActiveXInstall" is REG_DWORD = 1, this is n
   
       describe registry_key({
         hive: 'HKLM',
-        key:  'Software\Policies\Microsoft\Internet Explorer\Security\ActiveX. ',
+        key:  'Software\Policies\Microsoft\Internet Explorer\Security\ActiveX',
       }) do
-        its("BlockNonAdminActiveXInstall") { should eq 1 }
+        its('BlockNonAdminActiveXInstall') { should eq 1 }
       end
 
 # STOP_DESCRIBE V-64715

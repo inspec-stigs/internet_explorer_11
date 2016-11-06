@@ -24,7 +24,7 @@ control 'V-46621' do
         hive: 'HKLM',
         key:  'Software\Policies\Microsoft\Internet Explorer\Security',
       }) do
-        its("DisableSecuritySettingsCheck") { should eq 0 }
+        its('DisableSecuritySettingsCheck') { should eq 0 }
       end
 
 # STOP_DESCRIBE V-46621

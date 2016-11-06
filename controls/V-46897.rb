@@ -22,9 +22,9 @@ control 'V-46897' do
   
       describe registry_key({
         hive: 'HKLM',
-        key:  'Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL  ',
+        key:  'Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL',
       }) do
-        its("(Reserved)") { should eq 1 }
+        its('(Reserved)') { should eq 1 }
       end
 
 # STOP_DESCRIBE V-46897

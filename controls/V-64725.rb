@@ -27,9 +27,9 @@ Criteria: If the value "1201" is REG_DWORD = 3, this is not a finding.
   
       describe registry_key({
         hive: 'HKLM',
-        key:  'Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\2. ',
+        key:  'Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\2',
       }) do
-        its("1201") { should eq 3 }
+        its('1201') { should eq 3 }
       end
 
 # STOP_DESCRIBE V-64725

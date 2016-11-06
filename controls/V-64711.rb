@@ -27,9 +27,9 @@ Criteria: If the value "PreventOverride" is REG_DWORD = 1, this is not a finding
   
       describe registry_key({
         hive: 'HKLM',
-        key:  'Software\Policies\Microsoft\Internet Explorer\PhishingFilter. ',
+        key:  'Software\Policies\Microsoft\Internet Explorer\PhishingFilter',
       }) do
-        its("PreventOverride") { should eq 1 }
+        its('PreventOverride') { should eq 1 }
       end
 
 # STOP_DESCRIBE V-64711

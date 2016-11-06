@@ -1,0 +1,23 @@
+---
+driver:
+  name: ec2
+  ## see .kitchen.ec2.yml for addl config
+  ## or vagrant and .kitchen.vagrant.yml
+
+provisioner:
+  name: dummy
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: windows-2012r2
+
+suites:
+  - name: default
+    verifier:
+      inspec_tests:
+        - .
+# or:
+#       - https://github.com/inspec-stigs/internet_explorer_11
+      format: progress
