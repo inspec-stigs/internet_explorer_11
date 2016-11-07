@@ -9,6 +9,10 @@ require 'optparse'
 # Most of these checks look like this:
 # The policy value for Computer Configuration -> Administrative Templates -> Windows Components -> Internet Explorer -> Internet Control Panel -> Security Page Turn on certificate address mismatch warning must be Enabled. Procedure: Use the Windows Registry Editor to navigate to the following key: HKLM\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings Criteria: If the value "WarnOnBadCertRecving" is REG_DWORD = 1, this is not a finding.'
 
+# ToDo
+#  When the value is '(Reserved)' the property is quoted, e.g. V-46721
+#  - +        its('(Reserved)') { should eq '1' }
+
 def inspec_check(text:, parse_reg:true, id:nil)
   if text.match(/Procedure: /) then
     begin
@@ -16,7 +20,6 @@ def inspec_check(text:, parse_reg:true, id:nil)
       hive = hivepath.captures[0]
       key  = hivepath.captures[1]
 
-      # Criteria: If the value "WarnOnBadCertRecving" is REG_DWORD = 1
       criteria = text.match /Criteria: If the value .*"([0-9A-z\.\(\)]+)" is ([A-Z_]+) ?= ?([\S+]+)/ || "nil"
       name = criteria.captures[0]
       registry_value_type = criteria.captures[1]

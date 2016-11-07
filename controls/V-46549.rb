@@ -19,15 +19,15 @@ control 'V-46549' do
   tag checktext: 'The policy value for Computer Configuration -> Administrative Templates -> Windows Components -> Internet Explorer -> Security Features -> Restrict ActiveX Install -> Internet Explorer Processes must be Enabled. Procedure: Use the Windows Registry Editor to navigate to the following key: HKLM\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL   Criteria: If the value "explorer.exe" is REG_SZ = 1, this is not a finding.'
 
 # START_DESCRIBE V-46549
-  
+
       describe registry_key({
         hive: 'HKLM',
         key:  'Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_RESTRICT_ACTIVEXINSTALL',
       }) do
-        its('explorer.exe') { should eq 1 }
+        pending "needs bugfix"
+        #its('explorerexe') { should eq 1 }
       end
 
 # STOP_DESCRIBE V-46549
 
 end
-
